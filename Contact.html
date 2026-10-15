@@ -1,0 +1,170 @@
+ <html>
+<head>
+
+
+    <title>Contact </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(#DE7DB4, #D4599F, #822158);
+            min-height: 100vh;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(#DE7DB4, #822158, #DE7DB4);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+        }
+
+        nav {
+            background: #D4599F;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #DE7DB4f;
+            transform: translateY(-3px);
+        }
+
+        .contact-container {
+            width: 90%;
+            max-width: 700px;
+            margin: 60px auto;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            color: #6A4039;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        button {
+            display: block;
+            margin: 25px auto 0;
+            padding: 13px 35px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(#DE7DB4, #D4599F, #E7A2C9);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #DE7DB4;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1> For More Information</h1>
+        <p>Contact Us</p>
+    </header>
+
+    <nav>
+        <a href="homee.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+		<a href="Product.html">Product</a>
+    </nav>
+
+    <div class="contact-container">
+
+        <h2>Contact Us</h2>
+
+        <form onsubmit="sendMessage(event)">
+
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Message</label>
+            <textarea id="message" placeholder="Write your message..." required></textarea>
+
+            <button type="submit">Send Message</button>
+			
+<button type="submit"> <a href="logini.html">log out</a></button>
+
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p> Miss. Nicky | JEWELRY COLLECTION</p>
+   </footer>
+
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+
+            alert("Thank you! Your message has been submitted.");
+
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
+
+</body>
+</html>
