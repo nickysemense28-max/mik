@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEWELRY COLLECTION - FILM VIEWING</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("1000.jpg");
+            background-color: #ffe6f2;
+            margin: 0;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            text-align: center;
+            padding: 20px 20px 0 20px; /* Adjusted padding to host navigation inside header */
+        }
+
+        /* Top Navigation Menu Bars styling */
+        nav {
+            background-color: #ffb6d9;
+            text-align: center;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px 10px 0 0; /* Smooth top corners inside header context */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Cinematic Theater Video Screen */
+        .video-viewer-container {
+            background-color: white;
+            border: 3px solid #ff69b4;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px #d99bb8;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            background: #000;
+        }
+
+        .video-info {
+            padding: 25px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .video-info h2 {
+            color: #ff1493;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .video-info p {
+            color: #d63384;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* 5-Film Selection Grid Configuration */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .product {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #ff69b4;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px #d99bb8;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            border-color: #ff1493;
+        }
+
+        .product.active-card {
+            border-color: #ff1493;
+            background-color: #fff0f7;
+            box-shadow: 0 4px 15px #ff69b4;
+        }
+
+        /* Styling for the Preview Images */
+        .product-thumbnail {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ffb6d9;
+        }
+
+        .product h3 {
+            color: #ff1493;
+            font-size: 16px;
+            margin: 10px 0 5px 0;
+        }
+
+        .runtime {
+            color: #d63384;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>JEWELRY FILMS</h1>
+    <p>Welcome to our jewelry cinema collection! Experience moving art pieces crafted from precious metals and gemstones.</p>
+
+    <!-- Top Navigation Area placed perfectly inside header layout -->
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="Product.html">Product</a>
+		<a href="film.html">Films</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- Active Film Player Window -->
+    <div class="video-viewer-container">
+        <video id="main-video-player" controls poster="11.jpg">
+            <source id="video-source" src="https://w3schools.com" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+            <h2 id="video-title">FILM 1: HEART NECKLACE SHOWCASE</h2>
+            <p id="video-desc">A beautiful close-up look at the intricate curves and brilliant light reflections of our signature gold heart pendant collection.</p>
+        </div>
+    </div>
+
+    <!-- Film Selection Track List (5 Items with Images) -->
+    <div class="products">
+        
+        <!-- Film 1 -->
+        <div class="product active-card" onclick="changeVideo('https://w3schools.com', 'FILM 1: HEART NECKLACE SHOWCASE', 'A beautiful close-up look at the intricate curves and brilliant light reflections of our signature gold heart pendant collection.', this, '11.jpg')">
+            <img src="11.jpg" alt="Heart Necklace Preview" class="product-thumbnail">
+            <h3>HEART NECKLACE</h3>
+         
+        </div>
+
+        <!-- Film 2 -->
+        <div class="product" onclick="changeVideo('https://w3schools.com', 'FILM 2: ENGAGEMENT RING BRILLIANCE', 'A high-definition look highlighting diamond clarity metrics under direct showroom lighting setups.', this, '12.jpg')">
+            <img src="12.jpg" alt="Engagement Ring Preview" class="product-thumbnail">
+            <h3>ENGAGEMENT RING</h3>
+            
+        </div>
+
+        <!-- Film 3 -->
+        <div class="product" onclick="changeVideo('https://w3schools.com', 'FILM 3: YELLOW GOLD HOLLOW ROPE CHAIN', 'A continuous panoramic moving sequence displaying the flexible interlocking chain links and craftsmanship details.', this, '13.jpg')">
+            <img src="13.jpg" alt="Yellow Gold Chain Preview" class="product-thumbnail">
+            <h3>YELLOW GOLD CHAIN</h3>
+           
+        </div>
+
+        <!-- Film 4 -->
+        <div class="product" onclick="changeVideo('https://w3schools.com', 'FILM 4: CELESTE SUN AND MOON PENDANT', 'Capturing the deep, natural shell stone textures alongside polished structural gold frame cuts.', this, '14.jpg')">
+            <img src="14.jpg" alt="Celeste Pendant Preview" class="product-thumbnail">
+            <h3>CELESTE PENDANT</h3>
+            
+        </div>
+
+    </div>
+
+</main>
+
+<script>
+    // Video Track Swapping Function
+    function changeVideo(videoUrl, title, description, clickedCard, posterUrl) {
+        const player = document.getElementById('main-video-player');
+        const source = document.getElementById('video-source');
+        
+        // Update Video Elements
+        source.src = videoUrl;
+        player.poster = posterUrl; // Dynamically switches the video splash image
+        document.getElementById('video-title').innerText = title;
+        document.getElementById('video-desc').innerText = description;
+        
+        // Reload and Run Video
+        player.load();
+        player.play().catch(function(error) {
+            console.log("Playback interaction handled safely: ", error);
+        });
+
+        // Toggle Selected Card CSS Highlight Group
+        const cards = document.querySelectorAll('.product');
+        cards.forEach(function(card) {
+            card.classList.remove('active-card');
+        });
+        clickedCard.classList.add('active-card');
+    }
+</script>
+
+</body>
+</html>

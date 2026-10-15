@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Luxury Jewelry - Cinema Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Luxury Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">AURA</div>
+        <nav>
+            <a href="#home" class="nav-link active" onclick="switchPage('home')">Home</a>
+            <a href="#product-login" class="nav-link" onclick="switchPage('product-login')">Product Login</a>
+            <a href="#contact" class="nav-link" onclick="switchPage('contact')">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- HOME PAGE: FILM VIEWING EXPERIENCE -->
+        <section id="home-page" class="page active">
+            <h1 class="section-title">The Masterpiece Collections</h1>
+            
+            <!-- Main Video Viewer Screen -->
+            <div class="video-viewer-container">
+                <video id="main-video-player" controls poster="https://unsplash.com">
+                    <source id="video-source" src="https://w3schools.com" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-info">
+                    <h2 id="video-title">1. Signature Diamond Ring Showcase</h2>
+                    <p id="video-desc">A deep macro lens analysis highlighting the handcrafted micro-pave details and clarity metrics under gallery lighting spotlights.</p>
+                </div>
+            </div>
+
+            <!-- Expanded Film Grid Selection (4 Films) -->
+            <div class="film-grid">
+                <!-- Film 1 -->
+                <div class="film-card active-card" onclick="changeVideo('https://w3schools.com', '1. Signature Diamond Ring Showcase', 'A deep macro lens analysis highlighting the handcrafted micro-pave details and clarity metrics under gallery lighting spotlights.', this)">
+                    <div class="thumbnail-placeholder">? Diamond Ring</div>
+                    <h3>Signature Ring</h3>
+                </div>
+                <!-- Film 2 -->
+                <div class="film-card" onclick="changeVideo('https://w3schools.com', '2. Ethereal Emerald Necklace Story', 'Capturing the raw reflection and light refraction of emerald step cuts paired with deep 18k yellow gold bands.', this)">
+                    <div class="thumbnail-placeholder">? Emerald Necklace</div>
+                    <h3>Ethereal Emerald</h3>
+                </div>
+                <!-- Film 3 -->
+                <div class="film-card" onclick="changeVideo('https://w3schools.com', '3. Majestic Sapphire Bracelet Display', 'A continuous panoramic tracking shot capturing the structural flexibility and stone settings of our platinum link bracelet.', this)">
+                    <div class="thumbnail-placeholder">? Sapphire Bracelet</div>
+                    <h3>Majestic Sapphire</h3>
+                </div>
+                <!-- Film 4 -->
+                <div class="film-card" onclick="changeVideo('https://w3schools.com', '4. Golden Hour Tiara Legacy', 'A cinematic drone-and-dolly configuration highlighting the heritage tiara compilation designed for modern gala events.', this)">
+                    <div class="thumbnail-placeholder">? Heritage Tiara</div>
+                    <h3>Golden Heritage</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT LOGIN PAGE -->
+        <section id="product-login-page" class="page">
+            <div class="form-card">
+                <h2>Product System Gateway</h2>
+                <p>Log in to access your secure high-definition brand assets, catalog files, and order workflows.</p>
+                <form onsubmit="event.preventDefault(); alert('Login submission intercepted successfully.');">
+                    <div class="input-group">
+                        <label for="email">Account Email</label>
+                        <input type="email" id="email" required placeholder="name@luxuryfirm.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-primary">Access Secure Terminal</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="contact-page" class="page">
+            <div class="form-card">
+                <h2>Inquire & Collaborate</h2>
+                <p>Connect with our cinema team regarding custom jewelry productions or video catalogs.</p>
+                <form onsubmit="event.preventDefault(); alert('Message logged successfully.');">
+                    <div class="input-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Jane Doe">
+                    </div>
+                    <div class="input-group">
+                        <label for="msg">Project Message</label>
+                        <textarea id="msg" rows="4" required placeholder="Describe your wholesale or cinematography request..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
