@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About - SHOP WATTPAD BOOKS</title>
+    <title>About - JEWELRY COLLECTION</title>
 
     <style>
         * {
@@ -14,35 +15,56 @@
         }
 
         body {
-            background: linear-gradient(#AD7F9A, #9C6383, #80526C);
+            background: linear-gradient(
+                #AD7F9A,
+                #9C6383,
+                #80526C
+            );
             min-height: 100vh;
             color: white;
+            overflow-x: hidden;
         }
 
         header {
-            background: linear-gradient(#80526C, #9C6383, #80526C);
+            background: linear-gradient(
+                #80526C,
+                #9C6383,
+                #80526C
+            );
             text-align: center;
             padding: 40px 20px;
         }
 
         header h1 {
             font-size: 38px;
+            line-height: 1.3;
+            overflow-wrap: break-word;
         }
 
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Navigation */
         nav {
             background: #AD7F9A;
             display: flex;
             justify-content: center;
-            gap: 15px;
-            padding: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px 10px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 12px 20px;
             border-radius: 8px;
             transition: 0.3s;
+            font-size: 16px;
+            text-align: center;
         }
 
         nav a:hover {
@@ -50,18 +72,21 @@
             transform: translateY(-3px);
         }
 
+        /* About Container */
         .container {
+            width: 90%;
             max-width: 850px;
             margin: 60px auto;
             padding: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             text-align: center;
         }
 
         .container h2 {
-            color: #d9a7ff;
+            color: #f2c6ff;
             font-size: 32px;
+            line-height: 1.4;
             margin-bottom: 20px;
         }
 
@@ -69,13 +94,100 @@
             line-height: 1.8;
             font-size: 18px;
             margin-bottom: 20px;
+            overflow-wrap: break-word;
         }
 
+        /* Footer */
         footer {
             background: #BF9BB0;
             text-align: center;
-            padding: 20px;
+            padding: 20px 10px;
             margin-top: 80px;
+            font-size: 16px;
+        }
+
+        /* Cellphone Responsive */
+        @media screen and (max-width: 600px) {
+
+            header {
+                padding: 28px 15px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav {
+                gap: 6px;
+                padding: 12px 8px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+
+            .container {
+                width: 92%;
+                margin: 30px auto;
+                padding: 25px 18px;
+                border-radius: 12px;
+            }
+
+            .container h2 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .container p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            footer {
+                margin-top: 40px;
+                padding: 18px 10px;
+                font-size: 14px;
+            }
+        }
+
+        /* Extra Small Cellphones */
+        @media screen and (max-width: 360px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            nav {
+                gap: 5px;
+                padding: 10px 5px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 9px 10px;
+            }
+
+            .container {
+                width: 94%;
+                padding: 20px 14px;
+            }
+
+            .container h2 {
+                font-size: 21px;
+            }
+
+            .container p {
+                font-size: 14px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -83,7 +195,7 @@
 <body>
 
     <header>
-        <h1> JEWELRY COLLECTION</h1>
+        <h1>JEWELRY COLLECTION</h1>
         <p>About Us</p>
     </header>
 
@@ -91,23 +203,31 @@
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-		<a href="Product.html">Product</a>
-			<a href="film.html">Films</a>
+        <a href="Product.html">Product</a>
+        <a href="film.html">Films</a>
     </nav>
 
     <div class="container">
 
-        <h2>About the JEWELRY COLLECTION/h2>
+        <h2>About the JEWELRY COLLECTION</h2>
 
         <p>
-            
+            Welcome to our Jewelry Collection! We offer beautiful
+            and elegant jewelry pieces designed to make every moment
+            special. Our collection includes stylish accessories
+            crafted to complement your beauty and personal style.
         </p>
 
+        <p>
+            Our goal is to provide jewelry that combines elegance,
+            quality, and affordability. Thank you for visiting
+            our collection!
+        </p>
 
     </div>
 
     <footer>
-        <p> Miss. Nicky  | JEWELRY COLLECTION </p>
+        <p>Miss. Nicky | JEWELRY COLLECTION</p>
     </footer>
 
 </body>
