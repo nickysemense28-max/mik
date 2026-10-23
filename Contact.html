@@ -1,10 +1,8 @@
-
-<html lang="en">
+ <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact</title>
+
+    <title>Contact </title>
 
     <style>
         * {
@@ -28,53 +26,42 @@
 
         header h1 {
             font-size: 38px;
-            margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 18px;
-        }
-
-        /* Navigation */
         nav {
             background: #D4599F;
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px 10px;
+            gap: 15px;
+            padding: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
+            padding: 12px 25px;
             border-radius: 8px;
             transition: 0.3s;
-            font-size: 16px;
         }
 
         nav a:hover {
-            background: #822158;
-            transform: translateY(-2px);
+            background: #DE7DB4f;
+            transform: translateY(-3px);
         }
 
-        /* Contact Form */
         .contact-container {
             width: 90%;
             max-width: 700px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.15);
+            margin: 60px auto;
+            background: rgba(255,255,255,0.1);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
         }
 
         .contact-container h2 {
             text-align: center;
-            color: white;
-            margin-bottom: 25px;
+            color: #6A4039;
+            margin-bottom: 30px;
             font-size: 32px;
         }
 
@@ -82,149 +69,44 @@
             display: block;
             margin-top: 15px;
             margin-bottom: 7px;
-            font-size: 16px;
         }
 
         input,
         textarea {
-            display: block;
             width: 100%;
             padding: 13px;
             border: none;
             border-radius: 8px;
             outline: none;
-            font-size: 16px;
-        }
-
-        input:focus,
-        textarea:focus {
-            box-shadow: 0 0 0 2px #822158;
         }
 
         textarea {
             height: 130px;
-            resize: vertical;
+            resize: none;
         }
 
-        button,
-        .logout-btn {
+        button {
             display: block;
-            width: fit-content;
             margin: 25px auto 0;
-            padding: 13px 30px;
+            padding: 13px 35px;
             border: none;
             border-radius: 8px;
-            background: linear-gradient(#DE7DB4, #D4599F, #822158);
+            background: linear-gradient(#DE7DB4, #D4599F, #E7A2C9);
             color: white;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            transition: 0.3s;
         }
 
-        button:hover,
-        .logout-btn:hover {
+        button:hover {
             transform: scale(1.05);
-            background: #822158;
         }
 
         footer {
             background: #DE7DB4;
             text-align: center;
-            padding: 18px 10px;
-            margin-top: 40px;
-            font-size: 15px;
-        }
-
-        /* Cellphone Responsive */
-        @media screen and (max-width: 600px) {
-            header {
-                padding: 28px 15px;
-            }
-
-            header h1 {
-                font-size: 27px;
-                line-height: 1.3;
-            }
-
-            header p {
-                font-size: 16px;
-            }
-
-            nav {
-                gap: 7px;
-                padding: 12px 8px;
-            }
-
-            nav a {
-                font-size: 14px;
-                padding: 10px 12px;
-            }
-
-            .contact-container {
-                width: 92%;
-                margin: 25px auto;
-                padding: 22px 18px;
-                border-radius: 12px;
-            }
-
-            .contact-container h2 {
-                font-size: 26px;
-                margin-bottom: 20px;
-            }
-
-            label {
-                font-size: 15px;
-            }
-
-            input,
-            textarea {
-                padding: 12px;
-                font-size: 16px;
-            }
-
-            textarea {
-                height: 120px;
-            }
-
-            button,
-            .logout-btn {
-                width: 100%;
-                padding: 13px 15px;
-                font-size: 15px;
-            }
-
-            footer {
-                margin-top: 25px;
-                font-size: 13px;
-                padding: 15px 8px;
-            }
-        }
-
-        /* Extra Small Phones */
-        @media screen and (max-width: 360px) {
-            header h1 {
-                font-size: 23px;
-            }
-
-            nav {
-                gap: 5px;
-            }
-
-            nav a {
-                font-size: 12px;
-                padding: 9px 10px;
-            }
-
-            .contact-container {
-                padding: 18px 13px;
-            }
-
-            .contact-container h2 {
-                font-size: 23px;
-            }
+            padding: 15px;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -232,16 +114,16 @@
 <body>
 
     <header>
-        <h1>For More Information</h1>
+        <h1> For More Information</h1>
         <p>Contact Us</p>
     </header>
 
     <nav>
         <a href="home.html">home</a>
-        <a href="about.html">about</a>
-        <a href="Contact.html">Contact</a>
-        <a href="Product.html">Product</a>
-        <a href="film.html">films</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+		<a href="Product.html">Product</a>
+			<a href="film.html">Films</a>
     </nav>
 
     <div class="contact-container">
@@ -250,43 +132,31 @@
 
         <form onsubmit="sendMessage(event)">
 
-            <label for="name">Name</label>
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                required
-            >
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
 
-            <label for="email">Email</label>
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-            >
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
 
-            <label for="message">Message</label>
-            <textarea
-                id="message"
-                placeholder="Write your message..."
-                required
-            ></textarea>
+            <label>Message</label>
+            <textarea id="message" placeholder="Write your message..." required></textarea>
 
             <button type="submit">Send Message</button>
+			
+<button type="submit"> <a href="logini.html">log out</a></button>
+
 
         </form>
-
-        <a href="login.html" class="logout-btn">Log Out</a>
 
     </div>
 
     <footer>
-        <p>Miss. Nicky | JEWELRY COLLECTION</p>
-    </footer>
+        <p> Miss. Nicky | JEWELRY COLLECTION</p>
+   </footer>
+
 
     <script>
-        function send Message(event) {
+        function sendMessage(event) {
             event.preventDefault();
 
             alert("Thank you! Your message has been submitted.");
